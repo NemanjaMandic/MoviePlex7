@@ -16,7 +16,7 @@
                         <f:selectItems value="#{movieFacadeRest.all}"
                                        var="m"
                                        itemValue="#{m.id}"
-                                       itemLabel="#{m.name}"
+                                       itemLabel="#{m.name}" />
                     </h:selectOneRadio>
                     <h:commandButton id="shows" value="Pick a time" action="showtimes" />
                 </h:form>
