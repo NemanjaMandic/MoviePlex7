@@ -1,14 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <body>
 
         <ui:composition template="./../WEB-INF/template.xhtml">
 
             <ui:define name="content">
-                content
+                <h2>Reservation Confirmed</h2>
+                <h:form>
+                    <p>Movie name: #{booking.movieName}</p>
+                    <p>Starts at: #{booking.startTime}</p>
+                    <p>Theater: #{booking.theater}</p>
+                    <h:commandButton id="home" value="home" action="goHome" />
+                </h:form>
             </ui:define>
 
         </ui:composition>

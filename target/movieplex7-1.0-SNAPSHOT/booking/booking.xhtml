@@ -12,15 +12,21 @@
             <ui:define name="content">
                 <h2>Pick a movie</h2>
                 <h:form prependId="false">
-                    <h:selectOneRadio value="#{booking.movieId}" layout="pageDirection" required="true">
-                        <f:selectItems value="#{movieFacadeRest.all}"
-                                       var="m"
-                                       itemValue="#{m.id}"
-                                       itemLabel="#{m.name}" />
+                    <h:selectOneRadio
+                        value="#{booking.movieId}"
+                        layout="pageDirection"
+                        required="true">
+                        <f:selectItems
+                            value="#{movieFacadeRest.all}"
+                            var="movie"
+                            itemValue="#{movie.id}" 
+                            itemLabel="#{movie.name}"/>
                     </h:selectOneRadio>
-                    <h:commandButton id="shows" value="Pick a time" action="showtimes" />
+                    <h:commandButton id="shows" value="Pick a time"
+                                     action="showtimes"/>
                 </h:form>
             </ui:define>
+
 
         </ui:composition>
 

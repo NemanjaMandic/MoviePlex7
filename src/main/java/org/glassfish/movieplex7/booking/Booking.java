@@ -5,6 +5,7 @@
  */
 package org.glassfish.movieplex7.booking;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.StringTokenizer;
 import javax.faces.flow.FlowScoped;
@@ -15,9 +16,10 @@ import javax.persistence.PersistenceContext;
 import org.glassfish.movieplex7.entities.Movie;
 import org.glassfish.movieplex7.entities.ShowTiming;
 
+
 @Named
 @FlowScoped("booking")
-public class Booking {
+public class Booking implements Serializable{
     
     @PersistenceContext
     EntityManager em;
